@@ -1,0 +1,128 @@
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --accent-color: #0dcaf0;
+  --text-color: #212529;
+  --background-color: #ffffff;
+  --card-bg: #f8f9fa;
+  --border-color: #dee2e6;
+}
+
+[data-bs-theme="dark"] {
+  --primary-color: #0d6efd;
+  --secondary-color: #adb5bd;
+  --accent-color: #0dcaf0;
+  --text-color: #f8f9fa;
+  --background-color: #212529;
+  --card-bg: #343a40;
+  --border-color: #495057;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  transition: all 0.3s ease;
+}
+
+.indie-font {
+  font-family: 'Indie Flower', cursive;
+}
+
+.section-title {
+  font-family: 'Indie Flower', cursive;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+header {
+  background-color: var(--background-color) !important;
+}
+
+.project-item {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+ 
+}
+
+.hero {
+  background-color: var(--card-bg);
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color) !important;
+}
+
+.review-card {
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  height: 100%;
+}
+
+.reviews {
+  background-color: var(--card-bg);
+}
+
+.opensrc-section {
+  border-top: 1px solid var(--border-color);
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.theme-switch {
+  position: relative;
+  margin-left: 10px;
+}
+
+#theme-toggle {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+footer {
+  background-color: var(--card-bg);
+}
+
+footer i {
+  color: var(--text-color);
+}
+
+/* Định dạng phần main content với flexbox */
+.container.my-5 {
+  width: 100%;
+  max-width: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 20px; /* Khoảng cách giữa các phần */
+}
+
+/* Định dạng các phần con (Projects, Experience, Education) */
+.container.my-5 > .col-md-4 {
+  flex: 1; /* Chia đều không gian */
+  max-width: 100%;
+}
+
+/* Đảm bảo card chiếm toàn bộ chiều rộng  */
+.container.my-5 .card {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 767.98px) {
+  .review-card:not(:first-child) {
+      display: none;
+  }
+  
+  .container.my-5 {
+      flex-direction: column;
+  }
+}
